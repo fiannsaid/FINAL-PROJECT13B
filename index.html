@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="5856.jpg" type="image/x-icon">
+    <title>Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('blue-oil-paint-textured-background.jpg'); /*gambarnya dari freepik*/
+            background-repeat: repeat;
+        }
+
+        header {
+            background-color: #4682B4;
+            color: #fff;
+            padding: 50px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        header::before {
+            content: "★"; 
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 15px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .content {
+            margin-top: 80px;
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 170px;
+            background-color: #fff;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-family: "Arial", sans-serif;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-family: "Times New Roman", serif;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            font-family: "Verdana", sans-serif;
+        }
+
+        .special-font {
+            font-family: "Courier New", monospace;
+        }
+      
+    </style>
+</head>
+<body>
+    <header>
+        <h1>M. Alfian Maulana Al-Azhar, S.Kom</h1>
+        <h3>Jawa Barat | 082125403625 | fiansaid17@gmail.com</h3>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#interests">Interests</a>
+            <a href="#awards">Awards</a>
+        </nav>
+    </header>
+    <div class="content">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Saya merupakan lulusan dari Intitut Teknologi Telkom Purwokerto jurusan Software Engineering, saya memiliki pemahaman yang kuat tentang konsep dan prinsip dasar pembuatan perangkat lunak yang efektif dan efisien. Selama studi saya, saya telah mempelajari berbagai bahasa pemrograman, algoritma, dan struktur data. Saya juga terbiasa dengan penggunaan perangkat lunak untuk mengelola proyek dan bekerja secara kolaboratif dengan tim. Saya juga memiliki keterampilan interpersonal yang baik dan dapat berkomunikasi dengan jelas dan efektif dengan tim dan klien. Saya dapat mengelola waktu dengan baik dan bekerja secara mandiri atau dalam tim.</p>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <p><h4>Proyek Website Sekolah Dasar - Purwokerto, Indonesia (Nov 2021 - Jan 2022)</h4></p>
+            <p>Team Leader</p>
+            <li>Bertanggung jawab atas kinerja tim yang memiliki >5 anggota dalam pembuatan website sekolah dasar dan menyelesaikan proyek dalam waktu 3 bulan.</li>
+            <li>Bertugas sebagai front end pembuatan website sekolah dasar yang menghasilkan kepuasan klien terhadap kinerja tim.</li>
+
+            <p><h4>Gamelab - Salatiga, Jawa Tengah (Aug 2022 - Dec 2022)</h4></p>
+            <p>FrontEnd Developer Web</p>
+            <li>Membuat website dengan menggunakan HTML dan CSS</li>
+            <li>Membuat website dengan menggunakan Landing Page dengan Bootstrap dan membuat Compiled CSS menggunakan SASS</li>
+            <li>Membuat website UMKM dengan berkolaborasi dengan tim</li>
+
+            <p><h4>Jurnal MANTIK - Sumatera, Indonesia (Jul 2022 - Aug 2022)</h4></p>
+            <p>Author</p>
+            <li>Bertanggung jawab dalam pembuatan isi jurnal yang membahas mengenai pembuatan website untuk sekolah dasar berdasarkan permintaan klien.</li>
+            <li>Bertanggung jawab dalam penelitian yang dilakukan untuk membuat jurnal ilmiah dengan berkolaborasi dengan tim terkait pembuatan website.</li>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <p><h4>Institut Teknologi Telkom Purwokerto - Banyumas, Indonesia (Sep 2019 - Feb 2023)</h4></p>
+            <p>Bachelor Degree in Software Engineering, 3.71/4.00</p>
+            <p>Membuat penelitian untuk tugas akhir dengan mengangkat tema evaluasi dan re design sebuah aplikasi untuk dapat dikembangkan menjadi lebih baik.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <li>Hard Skills: Figma, Visual Studio Code, Microsoft Office, Cisco Packet Tracer, Troubleshooting, Android Studio, Intelij Idea</li>
+            <li>Soft Skills: Time Management, Team Work</li>
+        </section>
+
+        <section id="interests">
+            <h2>Interests</h2>
+            <p>Saya memiliki minat dibidang teknologi dan informasi</p>
+        </section>
+
+        <section id="awards">
+            <h2>Awards</h2>
+            <p></p>
+        </section>
+    </div>
+
+    <script>
+        // Tambahkan efek scroll halus ketika menu di klik
+        document.querySelectorAll('a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70, // Sesuaikan dengan tinggi header
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
